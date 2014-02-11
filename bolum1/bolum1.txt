@@ -1,9 +1,0 @@
-1. Kurulum 
-
-Gtk (Gimp Toolkit) kullancı arayüzleri oluşturmak için bir kütüphanedir ve LGPL ile lisanslanmıştır. Bu Gtk ile açık yazılım, özgür yazılım, ticari özgür olmayan yazılımları Gtk kullanarak geliştirebilirsiniz. 
-
-Gtk'ya Gimp Toolkit denmesini nedeni, Gtk'nın Gnu Resim Düzenleyici (Gnu Image Manipulation - GIMP) için yazılmış olmasıdır. Gtk aynı zamanda Gnome masaüstü araçlarında kullanılmıştır. 
-
-Ruby'de gerekli olan kütüphaneler gem olarak sunuluyor. Gtk3 kütüphanesini yüklemeyi sudo gem install gtk3 şeklinde yapabiliriz. Gtk3 geminin resmi adresi: http://rubygems.org/gems/gtk3 Buradan Gtk3 bağımlılıklarını görebilirsiniz.
-
-Kaynak: http://ruby-gnome2.sourceforge.jp/hiki.cgi?tut-gtk-preface

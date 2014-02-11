@@ -1,22 +1,9 @@
-2. Başlangıç
+1. Kurulum 
 
-Ruby ve Gtk3 ile kodlama masaüstü yazılımlar yapmaya temel bir pencere oluştururarak başlayalım. Aşağıda örnekte verdiğim kod temel bir pencere oluşturur, bu kodun her satırı açıklayacağım:
+Gtk (Gimp Toolkit) kullancı arayüzleri oluşturmak için bir kütüphanedir ve LGPL ile lisanslanmıştır. Bu Gtk ile açık yazılım, özgür yazılım, ticari özgür olmayan yazılımları Gtk kullanarak geliştirebilirsiniz. 
 
-bolum2_basit_pencere.rb
+Gtk'ya Gimp Toolkit denmesini nedeni, Gtk'nın Gnu Resim Düzenleyici (Gnu Image Manipulation - GIMP) için yazılmış olmasıdır. Gtk aynı zamanda Gnome masaüstü araçlarında kullanılmıştır. 
 
-  #!/usr/bin/ruby
+Ruby'de gerekli olan kütüphaneler gem olarak sunuluyor. Gtk3 kütüphanesini yüklemeyi sudo gem install gtk3 şeklinde yapabiliriz. Gtk3 geminin resmi adresi: http://rubygems.org/gems/gtk3 Buradan Gtk3 bağımlılıklarını görebilirsiniz.
 
-  require "gtk3"
-
-  win = Gtk::Window.new
-  win.signal_connect("destroy"){Gtk.main_quit}
-  win.show_all
-  Gtk.main
-
-İlk satırda #!/usr/bin/ruby ifadesi ile /usr/bin/ruby şeklinde sistemimizdeki Ruby yorumlayıcısının yolunu belirtmiş oluyoruz. Bu her zaman gerekli bir özellik değil. Normalde Ruby ile kodlanmış Gtk uygulamalarını ruby dosya_adi.rb şeklinde çalıştırabiliriz. Ancak ilk satırı eklersek uygulamayı çalıştırırken ruby dosya_adi.rb yerine bulunduğumuz dizinde ./dosya_adi.rb şeklinde de çalıştırabiliriz.
-
-require "gtk3" ifadesi ise Gtk3'e ait tüm fonksiyonları kullanmak için dosyaya eklediğimiz kütüphanedir. win = Gtk::Window.new ise boş bir pencere oluşturmaya yarar. 
-
-win.signal_connect("destroy"){Gtk.main_quit} Buradaki .signal_connect ifadesi uygulamada dinlenilen bir özelliktir. Penceredeki x tuşuna tıkladığımızda .signal_connect("destroy") sinyalindeki fonskiyon çalışır. {...} arasındaki Gtk.main_quit ise pencerenin kapatılıp, programın bitirilmesini sağlar. win.show_all Pencerenin gösterilmesini sağlar. Aynı zamanda pencere üzerindeki görünümün güncellenmesini istediğimizde .show_all kullanabiliriz. Gtk.main ise Gtk.main_quit çağrılana kadar uygulamanın arayüzün çalışması için bir döngü oluşturur.
-
-Kaynak: http://python-gtk-3-tutorial.readthedocs.org/en/latest/introduction.html
+Kaynak: http://ruby-gnome2.sourceforge.jp/hiki.cgi?tut-gtk-preface
