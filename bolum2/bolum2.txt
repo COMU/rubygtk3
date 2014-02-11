@@ -18,3 +18,5 @@ bolum2_basit_pencere.rb
 require "gtk3" ifadesi ise Gtk3'e ait tüm fonksiyonları kullanmak için dosyaya eklediğimiz kütüphanedir. win = Gtk::Window.new ise boş bir pencere oluşturmaya yarar. 
 
 win.signal_connect("destroy"){Gtk.main_quit} Buradaki .signal_connect ifadesi uygulamada dinlenilen bir özelliktir. Penceredeki x tuşuna tıkladığımızda .signal_connect("destroy") sinyalindeki fonskiyon çalışır. {...} arasındaki Gtk.main_quit ise pencerenin kapatılıp, programın bitirilmesini sağlar. win.show_all Pencerenin gösterilmesini sağlar. Aynı zamanda pencere üzerindeki görünümün güncellenmesini istediğimizde .show_all kullanabiliriz. Gtk.main ise Gtk.main_quit çağrılana kadar uygulamanın arayüzün çalışması için bir döngü oluşturur.
+
+Kaynak: http://python-gtk-3-tutorial.readthedocs.org/en/latest/introduction.html
