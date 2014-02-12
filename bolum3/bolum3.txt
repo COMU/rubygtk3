@@ -1,4 +1,4 @@
-2. Başlangıç
+3. Başlangıç
 
 Ruby ve Gtk3 ile kodlama masaüstü yazılımlar yapmaya temel bir pencere oluştururarak başlayalım. Aşağıda örnekte verdiğim kod temel bir pencere oluşturur, bu kodun her satırı açıklayacağım:
 

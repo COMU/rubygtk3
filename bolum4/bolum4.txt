@@ -1,0 +1,16 @@
+4. Gtk Temelleri
+
+Bu bölümde Gtk'nın temel yönlerinden bahsedilecektir.
+
+4.1 Ana Döngü Sinyalleri
+
+Gtk.main sinyalinde olduğu Gtk'da bir çok sinyal çeşiti vardır ve istenen olay gerçekleşince çalışır. Gtk'nın yapısındaki sinyalleri kullanabileceğemiz gibi kendimiz sinyal de yazabiliriz. Örnekteki win.signal_connect("destroy"){Gtk.main_quit}'de olduğu arayüze konabilecek her aracın sahip olduğu sinyaller vardır. 
+
+
+4.2 Özellikler
+Özellikler widgetların durumunu ve yapılandırmasını sağlar. Her widget kendi özel özelliklerine sahiptir. Örneğin button değişkeni .label özelliğine sahiptir. Bu .label özelliği ise butona isim vermeye yarar. Örneğin bunun gibi:
+
+  label = Gtk::Label.new
+  label.set_label("Hello World")
+
+

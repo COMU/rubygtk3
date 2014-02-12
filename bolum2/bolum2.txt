@@ -1,4 +1,4 @@
-1. Kurulum 
+2. Kurulum 
 
 Gtk (Gimp Toolkit) kullancı arayüzleri oluşturmak için bir kütüphanedir ve LGPL ile lisanslanmıştır. Bu Gtk ile açık yazılım, özgür yazılım, ticari özgür olmayan yazılımları Gtk kullanarak geliştirebilirsiniz. 
 
