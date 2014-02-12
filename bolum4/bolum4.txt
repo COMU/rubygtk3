@@ -4,13 +4,19 @@ Bu bölümde Gtk'nın temel yönlerinden bahsedilecektir.
 
 4.1 Ana Döngü Sinyalleri
 
-Gtk.main sinyalinde olduğu Gtk'da bir çok sinyal çeşiti vardır ve istenen olay gerçekleşince çalışır. Gtk'nın yapısındaki sinyalleri kullanabileceğemiz gibi kendimiz sinyal de yazabiliriz. Örnekteki win.signal_connect("destroy"){Gtk.main_quit}'de olduğu arayüze konabilecek her aracın sahip olduğu sinyaller vardır. 
+Gtk olay odaklı programlama modelidir. Uygulama açıkken kullanıcı herhangi bir şey yapmadığında Gtk.main döngüsü çalışır ve bir olay, girdi bekler. Bu olayı ya da girdiyi aldıktan sonra ise uygulama buna göre çalışmaya devam eder.
 
+Uygulama üzerindeki bileşenler bir olay aldıklarında bir ya da daha fazla sinyal yayabilirler. Bu sinyaller alındığı zaman kodun ne yapacağını ise biz belirleriz. Örneğin button.signal_connect("clicked"){.. do something ..} diyerek arayüz üzerindeki düğmeye tıklama işlemi gerçekleştirildiği zaman yapılmasını istediğimiz şeyleri {..} parantezleri arasına yazmış oluruz. Bu parantezler arasında fonksiyon çağırımı, nesne oluşturma gibi istediğimiz şekilde kodlama yapabiliriz.
 
 4.2 Özellikler
-Özellikler widgetların durumunu ve yapılandırmasını sağlar. Her widget kendi özel özelliklerine sahiptir. Örneğin button değişkeni .label özelliğine sahiptir. Bu .label özelliği ise butona isim vermeye yarar. Örneğin bunun gibi:
+Arayüzdeki bileşenlerin durumunu ve yapılandırmasını sağlar. Her bileşen özelliklere sahiptir. Örneğin button değişkeni .label özelliğine sahiptir. Bu .label özelliği ise button değişkenine etiket vermeye yarar. Örneğin bunun gibi:
 
-  label = Gtk::Label.new
-  label.set_label("Hello World")
+
+  button = Gtk::Button.new(:label => "Hello World")
+
+  ## bu kodu aşağıdaki gibi de yazabiliriz
+
+  button = Gtk::Button.new
+  button.set_label("Hello World")
 
 
