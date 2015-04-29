@@ -3,7 +3,7 @@ require "gtk3"
 
 win = Gtk::Window.new
 hbox = Gtk::Box.new(:horizontal, 3)
-hello_button = Gtk::Button.new(:label => "Hello World")
+hello_button = Gtk::Button.new(:label => "Box Example")
 goobye_button = Gtk::Button.new(:label => "Goodbye")
 
 win.add(hbox)
